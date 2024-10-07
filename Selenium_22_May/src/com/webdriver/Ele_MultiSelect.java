@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Ele_MultiSelect {
 	public static void main(String[] args) throws InterruptedException {
-//		System.setProperty("webdriver.edge.driver", "C:\\Users\\jgpatel\\Desktop\\Automation\\edgedriver_win64\\msedgedriver.exe");
+//		System.setProperty("webdriver.edge.driver", "C:\\Users\\JAYKPATE\\Desktop\\Automation\\edgedriver_win64\\msedgedriver.exe");
 		WebDriver driver = new EdgeDriver();
 		driver.get("https://output.jsbin.com/osebed/2");
 		driver.manage().window().maximize();
@@ -31,7 +31,6 @@ public class Ele_MultiSelect {
 		s1.selectByVisibleText("Banana");
 		Thread.sleep(2000);
 		
-		driver.close();
-		
+		driver.quit();		
 	}
 }

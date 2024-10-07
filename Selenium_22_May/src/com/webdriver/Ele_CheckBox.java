@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
-public class ElementCheckBox {
+public class Ele_CheckBox {
 	public static void main(String[] args) throws InterruptedException {
-//		System.setProperty("webdriver.edge.driver", "C:\\Users\\jgpatel\\Desktop\\Automation\\edgedriver_win64\\msedgedriver.exe");
+//		System.setProperty("webdriver.edge.driver", "C:\\Users\\JAYKPATE\\Desktop\\Automation\\edgedriver_win64\\msedgedriver.exe");
 		WebDriver driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://demo.guru99.com/test/radio.html");
@@ -16,6 +16,6 @@ public class ElementCheckBox {
 			driver.findElement(By.id("vfb-6-"+i)).click();
 			Thread.sleep(2000);
 		}
-		driver.close();
+		driver.quit();
 	}
 }

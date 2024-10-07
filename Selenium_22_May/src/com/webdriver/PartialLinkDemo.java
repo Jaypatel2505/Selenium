@@ -6,7 +6,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 public class PartialLinkDemo {
 	public static void main(String[] args) throws InterruptedException {
-//		System.setProperty("webdriver.edge.driver", "C:\\Users\\jgpatel\\Desktop\\Automation\\edgedriver_win64\\msedgedriver.exe");
+//		System.setProperty("webdriver.edge.driver", "C:\\Users\\JAYKPATE\\Desktop\\Automation\\edgedriver_win64\\msedgedriver.exe");
 		WebDriver driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		Thread.sleep(2000);

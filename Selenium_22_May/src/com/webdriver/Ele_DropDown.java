@@ -2,29 +2,28 @@ package com.webdriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
 
-/*
- * CSS ID
- * Syntax : tagname#id(input#user-name)
- */
-public class Loc_CSS_ID {
+public class Ele_DropDown {
 	public static void main(String[] args) throws InterruptedException {
 //		System.setProperty("webdriver.edge.driver", "C:\\Users\\JAYKPATE\\Desktop\\Automation\\edgedriver_win64\\msedgedriver.exe");
 		WebDriver driver = new EdgeDriver();
-		driver.get("https://www.saucedemo.com/");
+		driver.get("https://demo.guru99.com/test/newtours/register.php");
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
 		
-		driver.findElement(By.cssSelector("input#user-name")).sendKeys("standard_user");
-		Thread.sleep(2000);
-
-		driver.findElement(By.cssSelector("input#password")).sendKeys("secret_sauce");
+		WebElement e1 = driver.findElement(By.name("country"));
+		
+		Select s1 = new Select(e1);
+		s1.selectByIndex(10);
+		
 		Thread.sleep(2000);
 		
-		driver.findElement(By.cssSelector("input#login-button")).click();
+		s1.selectByValue("INDIA");
 		Thread.sleep(2000);
 		
-		driver.close();
+		driver.quit();
 	}
 }

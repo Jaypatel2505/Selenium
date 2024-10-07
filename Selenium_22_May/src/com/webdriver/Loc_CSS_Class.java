@@ -9,9 +9,9 @@ import org.openqa.selenium.edge.EdgeDriver;
  * Syntax : <tagname>.<class_value>(input.input_error.form_input)
  * - Use . when class have space
  */
-public class LocCSSClass {
+public class Loc_CSS_Class {
 	public static void main(String[] args) throws InterruptedException {
-//		System.setProperty("webdriver.edge.driver", "C:\\Users\\jgpatel\\Desktop\\Automation\\edgedriver_win64\\msedgedriver.exe");
+//		System.setProperty("webdriver.edge.driver", "C:\\Users\\JAYKPATE\\Desktop\\Automation\\edgedriver_win64\\msedgedriver.exe");
 		WebDriver driver = new EdgeDriver();
 		driver.get("https://www.saucedemo.com/");
 		driver.manage().window().maximize();
