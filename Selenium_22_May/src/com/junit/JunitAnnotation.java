@@ -1,6 +1,7 @@
 package com.junit;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -27,5 +28,9 @@ public class JunitAnnotation {
 	@After
 	public void after() {
 		System.out.println("After Method");
+	}
+	@AfterClass
+	public static void afterClass() {
+		System.out.println("after class");
 	}
 }

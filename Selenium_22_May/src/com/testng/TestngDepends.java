@@ -10,7 +10,7 @@ public class TestngDepends {
 	
 	@Test
 	public void before() throws InterruptedException{
-		System.setProperty("webdriver.edge.driver", "C:\\Users\\jgpatel\\Desktop\\Automation\\edgedriver_win64\\msedgedriver.exe");
+//		System.setProperty("webdriver.edge.driver", "C:\\Users\\jgpatel\\Desktop\\Automation\\edgedriver_win64\\msedgedriver.exe");
 		driver = new EdgeDriver();
 		driver.get("https://www.saucedemo.com/");
 		driver.manage().window().maximize();
