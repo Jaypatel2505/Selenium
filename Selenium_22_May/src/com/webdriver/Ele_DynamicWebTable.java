@@ -18,7 +18,7 @@ public class Ele_DynamicWebTable {
 		List<WebElement>tr = driver.findElements(By.xpath("//*[@id=\"leftcontainer\"]/table/tbody/tr"));
 		System.out.println("No Of Rows : "+tr.size());
 		
-		List<WebElement>th = driver.findElements(By.xpath("//*[@id=\"leftcontainer\"]/table/tbody/tr/th"));
+		List<WebElement>th = driver.findElements(By.xpath("//*[@id=\"leftcontainer\"]/table/thead/tr/th"));
 		System.out.println("No Of Columns : "+th.size());
 		
 		for (int i = 1; i <=tr.size(); i++) {
@@ -29,8 +29,6 @@ public class Ele_DynamicWebTable {
 			System.out.println();
 			Thread.sleep(2000);
 		}
-		
-		
 		driver.quit();
 	}
 }
