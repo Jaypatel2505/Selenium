@@ -1,18 +1,23 @@
 package com.webdriver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
 public class MainPoint {
 	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new EdgeDriver();
+		
+//		Actions zoomout=new Actions(driver);
 		driver.get("https://demoqa.com/");
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
+//		zoomout.keyDown(Keys.CONTROL).sendKeys("-").keyUp(Keys.CONTROL).build().perform();
+		JavascriptExecutor zoomout = (JavascriptExecutor) driver;
+		zoomout.executeScript("document.body.style.zoom='75%'");
 		
 		//Element Option Click
 		/*driver.findElement(By.xpath("//h5[text()='Elements']")).click();
